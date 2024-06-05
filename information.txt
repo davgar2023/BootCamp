@@ -1,0 +1,36 @@
+BackEnd Software 
+
+
+Nodemon will still work if you install it into dependencies, but it’s good practice to use devDependencies for things you only need locally since it will make your production code faster, less likely to have bugs and more secure
+
+nodemon install 
+
+
+https://github.com/github/gitignore/blob/main/Node.gitignore
+
+
+
+const express = require('express')
+const app = express()
+const PORT = 3000
+
+app.get('/', (req, res) => {
+    res.send('Handling GET request to /')
+})
+
+app.post('/user', (req, res) => {
+    res.status(201)
+    res.send('Handling POST request to /user')
+})
+
+app.listen(PORT, () => {
+    console.log(`Example app running on port ${PORT}`)
+})
+
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key
+
+
+
+
+
