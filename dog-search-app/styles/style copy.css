@@ -17,14 +17,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left; /* Align content to the left */
-    max-width: 800px; /* Adjusted max-width for better desktop layout */
+    max-width: 600px;
     width: 100%;
     box-sizing: border-box;
     transition: transform 0.5s ease;
-    min-height: 100vh; /* Ensure container stretches vertically */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 h1 {
@@ -70,15 +66,18 @@ button:hover {
     margin-top: 20px;
     text-align: start;
     overflow-y: auto;
-    max-height: 400px; /* Limit max-height for scrollable content */
+    min-height: 100px;  /* Minimum height */
+    max-height: 400px;  /* Maximum height */
     padding: 10px;
 }
 
 .dog-item img {
-    width: 100%; /* Ensure image fills its container */
-    height: 200px; /* Example height; adjust as needed */
-    object-fit: cover; /* Prevents image stretching */
-    border-radius: 8px;
+    width:  260px;
+    height: 260px;
+    border-radius: 5%;
+    overflow: hidden;
+    align-items:flex-end;
+    object-fit: cover;
 }
 
 /* Dog Item Styles */
@@ -100,9 +99,9 @@ button:hover {
     background-color: #e0e0e0;
 }
 
-/* Error Message Color */
-.error-message {
-    color: red;
+/* change the color of the text error message when trying to load an image link*/
+.error-message { 
+    color: red; 
 }
 
 /* Media Queries for Responsive Design */
@@ -119,7 +118,7 @@ button:hover {
     }
 
     button {
-        width: 30%; /* Example: adjust width as needed */
+        width: auto;
     }
 }
 
@@ -138,4 +137,5 @@ button:hover {
         margin: 0;
         flex: 1;
     }
+
 }
